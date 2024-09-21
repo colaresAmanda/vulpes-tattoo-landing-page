@@ -11,14 +11,14 @@
       rel="stylesheet"
     />
   </head>
-  <body class="font-sans bg-neutral-950 text-neutral-50">
-    <header class=" relative ">
+  <body class="font-sans bg-neutral-950 text-white">
+    <header class="fixed top-0">
       <nav
-        class="  bg-neutral-950 fixed  w-full flex flex-col justify-between px-4 py-4 md:px-6 md:py-6 lg:py-4  md:h-20 overflow-hidden transform duration-200 ease-in lg:h-auto lg:flex-row"
+        class="bg-neutral-950 md:bg-neutral-950/20 fixed w-full flex flex-col justify-between px-4 py-4 md:px-6 md:py-6 lg:py-4 md:h-20 overflow-hidden transform duration-200 ease-in lg:h-auto lg:flex-row"
         aria-label="Main Navigation"
         id="menu"
       >
-        <div class="flex justify-between items-center ">
+        <div class="flex justify-between items-center">
           <a
             href="#"
             class="flex gap-2 items-center justify-center"
@@ -30,81 +30,142 @@
               class="w-12 h-12"
             />
             <div class="flex flex-col">
-              <span class="text-lg font-bold  -mb-1"
-                >Vulpes Tattoo</span
-              >
-             
+              <span class="text-lg font-bold -mb-1">Vulpes Tattoo</span>
             </div>
           </a>
-          
-         <!-- Hamburger button -->
-        <button id="hamburger-btn" class="relative w-7 h-5 flex flex-col justify-between items-center focus:outline-none  lg:hidden">
-          <span class="block w-full h-0.5 bg-neutral-50 transition-transform duration-300 ease-in-out rounded" id="line1"></span>
-          <span class="block w-full h-0.5 bg-neutral-50 transition-transform duration-300 ease-in-out rounded" id="line2"></span>
-          <span class="block w-full h-0.5 bg-neutral-50 transition-transform duration-300 ease-in-out rounded" id="line3"></span>
-        </button>
+
+          <!-- Hamburger button -->
+          <button
+            id="hamburger-btn"
+            class="relative w-7 h-5 flex flex-col justify-between items-center focus:outline-none lg:hidden"
+          >
+            <span
+              class="block w-full h-0.5 bg-neutral-50 transition-transform duration-300 ease-in-out rounded"
+              id="line1"
+            ></span>
+            <span
+              class="block w-full h-0.5 bg-neutral-50 transition-transform duration-300 ease-in-out rounded"
+              id="line2"
+            ></span>
+            <span
+              class="block w-full h-0.5 bg-neutral-50 transition-transform duration-300 ease-in-out rounded"
+              id="line3"
+            ></span>
+          </button>
           <!-- <img src="./public/images/svg/close-svgrepo-com (1).svg" alt="" class="w-6 h-6" /> -->
         </div>
 
-        <ul class="flex gap-8 flex-col items-center my-16 lg:flex-row lg:my-auto"  role="menu">
+        <ul
+          class="flex gap-8 flex-col items-center my-16 lg:flex-row lg:my-auto"
+          role="menu"
+        >
           <li role="menuitem">
-            <a href="#" class="text-sm text-neutral-200">Início</a>
+            <a href="#" class="text-sm hover:underline transition duration-300"
+              >Início</a
+            >
           </li>
           <li role="menuitem">
-            <a href="#" class="text-sm text-neutral-200">Sobre o tatuador</a>
+            <a href="#" class="text-sm hover:underline transition duration-300"
+              >Sobre o tatuador</a
+            >
           </li>
           <li role="menuitem">
-            <a href="#" class="text-sm text-neutral-100">Trabalhos feitos</a>
+            <a href="#" class="text-sm hover:underline transition duration-300"
+              >Trabalhos feitos</a
+            >
           </li>
           <li role="menuitem">
-            <a href="#" class="text-sm text-neutral-200">Perguntas frequentes</a>
+            <a href="#" class="text-sm hover:underline transition duration-300"
+              >Perguntas frequentes</a
+            >
           </li>
         </ul>
         <a
           id="action-button"
           href="#"
-          class="px-6 py-4  lg:py-2 text-sm bg-primary-600 rounded-full text-neutral-50 font-semibold flex items-center justify-center"
+          class="px-6 py-4 lg:py-2 text-sm bg-primary-600 rounded-full text-neutral-50 font-semibold flex items-center justify-center"
           >Fazer um orçamento</a
         >
       </nav>
     </header>
-    <main class="bg-image">
+    <main class="bg-image px-4 md:px-32 2xl:px-80 pt-20">
       <section
-        class="md:grid md:grid-cols-7 md:gap-16 md:pl-32 md:pr-16 md:py-24"
+        class="py-10 md:pt-24 lg:pt-0 2xl:pt-20 lg:grid lg:grid-cols-12 gap-8 2xl:gap-16"
         aria-labelledby="hero-heading"
       >
-        <div class="md:flex md:flex-col md:gap-2 md:items-start md:col-span-3">
-          <p class="md:text-sm" aria-label="Introductory Text">
-            Organização e Gerenciamento Sem Esforço
-          </p>
-          <h1 id="hero-heading" class="md:text-3xl md:font-bold">
-            Sua solução definitiva para
-            <span class="md:text-primary-600">gerenciamento</span> de
-            competições
+        <div
+          class="flex flex-col items-center lg:items-start gap-4 lg:col-span-6 justify-center"
+        >
+          <h1 class="text-3xl font-bold">
+            Estilo Único, Tatuagens Únicas – Conheça Vulpes Tattoo
           </h1>
           <p>
-            Gerencie suas competições de forma eficiente com o ScoreSync. Nosso
-            aplicativo simplifica todo o processo, desde a inscrição até as
-            classificações finais, garantindo uma experiência tranquila e
-            eficiente para organizadores e participantes.
+            No Vulpes Tattoo, cada tatuagem é feita com cuidado e atenção. Eu,
+            <span class="font-semibold">Érique Chibiaque</span> , acredito que
+            tatuagem é mais do que só um desenho na pele – é sobre contar a sua
+            história de um jeito único.
           </p>
+          <img
+            class="mb-10 md:w-96 lg:hidden"
+            src="./public/images/hero-image.png"
+            alt="Hero image showing competition management interface"
+          />
+
           <a
             href="#"
-            class="md:px-6 md:py-2 md:text-lg md:bg-primary-600 md:rounded-full md:text-white md:font-semibold"
-            >Assinar agora</a
+            class="text-center px-12 md:w-full lg:w-auto py-4 transition duration-700 bg-primary-600 rounded-full font-bold hover:bg-gradient-to-r from-primary-500 to-primary-600"
+            >Quero fazer uma tatuagem</a
           >
         </div>
-        <div class="md:col-span-4">
+        <div
+          class="hidden lg:block lg:col-span-6 "
+        >
           <img
-            class="md:w-[232rem]"
+            class="pb-32 "
             src="./public/images/hero-image.png"
             alt="Hero image showing competition management interface"
           />
         </div>
       </section>
-      <section>
-        <!-- Implement later -->
-      </section>
+
+      <section></section>
+      <!-- <section
+      class="my-16 pb-10 lg:grid lg:grid-cols-12 lg:gap-16 md:py-24"
+      aria-labelledby="hero-heading"
+    >
+      <div class="flex flex-col gap-4  px-20 md:items-center lg:items-start lg:col-span-6 lg:px-16">
+        <h1 id="hero-heading" class="text-3xl font-bold">
+          Estilo Único, Tatuagens Únicas – Conheça Vulpes Tatt00
+          
+        </h1>
+        <p>
+          No Vulpes Tattoo, cada tatuagem é feita com cuidado e atenção. Eu,
+         <span class="font-semibold">Érique Chibiaque</span> , acredito que tatuagem é mais do que só um desenho
+          na pele – é sobre contar a sua história de um jeito único.
+        </p>
+        <img
+          class="lg:hidden md:w-96"
+          src="./public/images/hero-image.png"
+          alt="Hero image showing competition management interface"
+        />
+
+        <a
+          href="#"
+          class="text-center px-6 py-4 text-lg bg-primary-600 rounded-full text-neutral-50 font-semibold"
+          >Quero fazer uma tatuagem</a
+        >
+      </div>
+      <div class="lg:col-span-4">
+        <img
+          class="hidden md:w-[200rem] lg:block lg:-mt-48"
+          src="./public/images/hero-image.png"
+          alt="Hero image showing competition management interface"
+        />
+      </div>
+    </section> -->
+      <!-- <section> -->
+      <!-- Implement later -->
+      <!-- </section>
       <section class="md:px-32 md:py-24">
         <h2 class="md:text-2xl md:text-center md:font-bold md:mb-16">
           Para quais modalidades o ScoreSync é perfeito?
@@ -269,7 +330,7 @@
           </ul>
           <div class="md:col-span-3"></div>
         </div>
-      </section>
+      </section> -->
     </main>
 
     <footer>
