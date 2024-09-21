@@ -27,7 +27,7 @@ module.exports = {
           950: '#590101'   // Darkest red, completing the palette
         },
         highlight: {
-          600: '#009EAB' // Highlight remains the same for contrast
+          600: '#0080DB' // Highlight remains the same for contrast
         },
         
      
