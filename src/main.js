@@ -1,17 +1,4 @@
-// document.addEventListener('DOMContentLoaded', () => {
-//   const ulElement = document.getElementById('fadeInUl') as HTMLElement
 
-//   function handleScroll() {
-//     const ulPosition = ulElement.getBoundingClientRect().top
-//     const screenPosition = window.innerHeight / 1.3
-
-//     if (ulPosition < screenPosition) {
-//       ulElement.classList.add('opacity-100', 'translate-y-0', 'animate-fadeIn')
-//     }
-//   }
-
-//   window.addEventListener('scroll', handleScroll)
-// })
 
 const btn = document.getElementById('hamburger-btn');
 const menu = document.getElementById('menu');
@@ -59,3 +46,32 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 AOS.init();
+
+
+
+
+
+
+function toggleFaq(element) {
+  const answer = element.nextElementSibling;
+  const icon = element.querySelector('.icon');
+
+  if (answer.style.display === "none" || answer.style.display === "") {
+    // Hide all other FAQ answers
+    document.querySelectorAll('.faq-answer').forEach((el) => {
+      el.style.display = 'none';
+    });
+    // Reset all icons
+    document.querySelectorAll('.icon').forEach((el) => {
+      el.textContent = '▼';
+    });
+
+    // Show the clicked FAQ answer
+    answer.style.display = "block";
+    icon.textContent = '▲';
+  } else {
+    // Hide the clicked FAQ answer
+    answer.style.display = "none";
+    icon.textContent = '▼';
+  }
+}

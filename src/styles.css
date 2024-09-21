@@ -125,3 +125,14 @@ body {
 .box-3.active .highlight-box {
   transition-delay: 0.0s;
 }
+
+
+
+
+
+
+.faq-answer {
+  display: none;
+  margin-top: 8px;
+  transition: max-height 0.3s ease-in-out;
+}
