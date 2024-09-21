@@ -1,32 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vulpes Tattoo - Érique Chibiaque</title>
+    <meta
+      name="description"
+      content="Vulpes Tattoo - Estúdio de tatuagem em Bagé, RS, criado por Érique Chibiaque. Especializado em tatuagens com pontilhismo, realismo, arte personalizada e fineline."
+    />
+    <meta
+      name="keywords"
+      content="Vulpes Tattoo, tatuagem, estúdio de tatuagem, Bagé, tatuador, Érique Chibiaque, retoque de tatuagens, tatuagens personalizados, tatuagem com pontilhismo, fineline ,tatuagem personalizada"
+    />
+    <meta name="author" content="Érique Chibiaque" />
+    <title>
+      Vulpes Tattoo - Estúdio de Tatuagem em Bagé | Érique Chibiaque
+    </title>
+
+    <!-- External stylesheets -->
     <link rel="stylesheet" href="./public/styles.css" />
     <link rel="stylesheet" href="./src/styles.css" />
+
+    <!-- Google font -->
     <link
       href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Favicon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="public/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="public/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="public/favicon-16x16.png"
+    />
+    <link rel="manifest" href="public/site.webmanifest" />
+    <link rel="mask-icon" href="public/safari-pinned-tab.svg" color="#db0401" />
+    <meta name="msapplication-TileColor" content="#db0401" />
+    <meta name="theme-color" content="#1a1a1a" />
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
   <body class="font-sans bg-neutral-950 text-white">
-    <header class="fixed top-0">
+    <!-- Fixed header for navigation -->
+    <header class="fixed top-0 z-50">
       <nav
-        class="bg-neutral-950 md:bg-neutral-950/20 fixed w-full flex flex-col justify-between px-4 py-4 md:px-6 md:py-6 lg:py-4 md:h-20 overflow-hidden transform duration-200 ease-in lg:h-auto lg:flex-row"
+        class="bg-neutral-950 md:bg-neutral-950/40 fixed w-full flex flex-col justify-between px-4 py-4 md:px-6 md:py-6 lg:py-2 md:h-20 overflow-hidden transform duration-200 ease-in lg:h-auto lg:flex-row"
         aria-label="Main Navigation"
         id="menu"
       >
+        <!-- Logo and Hamburger Menu -->
         <div class="flex justify-between items-center">
           <a
             href="#"
             class="flex gap-2 items-center justify-center"
-            aria-label="Score Sync - Gerenciador de Competições"
+            aria-label="Vulpes Tattoo - Estúdio de Tatuagem em Bagé"
           >
             <img
               src="./public/images/logo-image.png"
-              alt="Score Sync logo"
+              alt="Logotipo Vulpes Tattoo"
               class="w-12 h-12"
             />
             <div class="flex flex-col">
@@ -34,11 +76,13 @@
             </div>
           </a>
 
-          <!-- Hamburger button -->
+          <!-- Hamburger button for mobile menu toggle -->
           <button
             id="hamburger-btn"
             class="relative w-7 h-5 flex flex-col justify-between items-center focus:outline-none lg:hidden"
+            aria-label="Abrir Menu"
           >
+            <!-- Hamburger icon lines -->
             <span
               class="block w-full h-0.5 bg-neutral-50 transition-transform duration-300 ease-in-out rounded"
               id="line1"
@@ -52,290 +96,220 @@
               id="line3"
             ></span>
           </button>
-          <!-- <img src="./public/images/svg/close-svgrepo-com (1).svg" alt="" class="w-6 h-6" /> -->
         </div>
 
+        <!-- Navigation menu -->
         <ul
           class="flex gap-8 flex-col items-center my-16 lg:flex-row lg:my-auto"
           role="menu"
+          aria-label="Menu Principal"
         >
           <li role="menuitem">
-            <a href="#" class="text-sm hover:underline transition duration-300"
+            <a
+              href="#hero-heading"
+              class="text-sm hover:underline transition duration-300"
               >Início</a
             >
           </li>
           <li role="menuitem">
-            <a href="#" class="text-sm hover:underline transition duration-300"
+            <a
+              href="#about-section"
+              class="text-sm hover:underline transition duration-300"
               >Sobre o tatuador</a
             >
           </li>
           <li role="menuitem">
-            <a href="#" class="text-sm hover:underline transition duration-300"
+            <a
+              href="#portfolio-section"
+              class="text-sm hover:underline transition duration-300"
               >Trabalhos feitos</a
             >
           </li>
           <li role="menuitem">
-            <a href="#" class="text-sm hover:underline transition duration-300"
+            <a
+              href="#faq-section"
+              class="text-sm hover:underline transition duration-300"
               >Perguntas frequentes</a
             >
           </li>
         </ul>
+
+        <!-- Call-to-action button -->
         <a
           id="action-button"
-          href="#"
+          href="#contact-section"
           class="px-6 py-4 lg:py-2 text-sm bg-primary-600 rounded-full text-neutral-50 font-semibold flex items-center justify-center"
-          >Fazer um orçamento</a
+          aria-label="Solicitar orçamento"
         >
+          Fazer um orçamento
+        </a>
       </nav>
     </header>
+
+    <!-- Main content section -->
     <main class="bg-image px-4 md:px-32 2xl:px-80 pt-20">
+      <!-- Hero section -->
       <section
-        class="py-10 md:pt-24 lg:pt-0 2xl:pt-20 lg:grid lg:grid-cols-12 gap-8 2xl:gap-16"
+        class="pt-10 md:pt-24 lg:pt-0 2xl:pt-20 lg:grid lg:grid-cols-12 gap-8 2xl:gap-16"
         aria-labelledby="hero-heading"
+        id="hero-heading"
       >
         <div
           class="flex flex-col items-center lg:items-start gap-4 lg:col-span-6 justify-center"
         >
+          <!-- Main heading for hero -->
           <h1 class="text-3xl font-bold">
             Estilo Único, Tatuagens Únicas – Conheça Vulpes Tattoo
           </h1>
+
+          <!-- Introductory text -->
           <p>
             No Vulpes Tattoo, cada tatuagem é feita com cuidado e atenção. Eu,
-            <span class="font-semibold">Érique Chibiaque</span> , acredito que
+            <span class="font-semibold">Érique Chibiaque</span>, acredito que
             tatuagem é mais do que só um desenho na pele – é sobre contar a sua
             história de um jeito único.
           </p>
+
+          <!-- Hero image for mobile view -->
           <img
             class="mb-10 md:w-96 lg:hidden"
             src="./public/images/hero-image.png"
-            alt="Hero image showing competition management interface"
+            alt="Imagem do estúdio Vulpes Tattoo"
           />
 
+          <!-- Call-to-action button below hero text -->
           <a
-            href="#"
+            href="#contact-section"
             class="text-center px-12 md:w-full lg:w-auto py-4 transition duration-700 bg-primary-600 rounded-full font-bold hover:bg-gradient-to-r from-primary-500 to-primary-600"
-            >Quero fazer uma tatuagem</a
+            aria-label="Solicitar tatuagem"
           >
+            Quero fazer uma tatuagem
+          </a>
         </div>
-        <div
-          class="hidden lg:block lg:col-span-6 "
-        >
+
+        <!-- Hero image for desktop view -->
+        <div class="hidden lg:block lg:col-span-6">
           <img
-            class="pb-32 "
+            class="pb-32"
             src="./public/images/hero-image.png"
-            alt="Hero image showing competition management interface"
+            alt="Estúdio Vulpes Tattoo em Bagé"
           />
         </div>
       </section>
 
-      <section></section>
-      <!-- <section
-      class="my-16 pb-10 lg:grid lg:grid-cols-12 lg:gap-16 md:py-24"
-      aria-labelledby="hero-heading"
-    >
-      <div class="flex flex-col gap-4  px-20 md:items-center lg:items-start lg:col-span-6 lg:px-16">
-        <h1 id="hero-heading" class="text-3xl font-bold">
-          Estilo Único, Tatuagens Únicas – Conheça Vulpes Tatt00
-          
-        </h1>
-        <p>
-          No Vulpes Tattoo, cada tatuagem é feita com cuidado e atenção. Eu,
-         <span class="font-semibold">Érique Chibiaque</span> , acredito que tatuagem é mais do que só um desenho
-          na pele – é sobre contar a sua história de um jeito único.
-        </p>
-        <img
-          class="lg:hidden md:w-96"
-          src="./public/images/hero-image.png"
-          alt="Hero image showing competition management interface"
-        />
+      <!-- Showcase section with tattoo examples -->
+      <section
+        class="lg:grid lg:grid-cols-12 gap-24 2xl:gap-32 mt-24 lg:-mt-24"
+        id="portfolio-section"
+        aria-labelledby="portfolio-heading"
+      >
+        <div class="flex gap-8 col-span-5">
+          <div class="flex flex-col gap-8">
+            <!-- Tattoo images with hover effects -->
+            <img
+              data-aos="fade-right"
+              class="rounded-md transition-transform duration-300 ease-in-out hover:scale-110 z-0"
+              src="./public/images/showcases/1.png"
+              alt="Tatuagem de criatura mitológica"
+            />
+            <img
+              data-aos="fade-right"
+              class="rounded-md transition-transform duration-300 ease-in-out hover:scale-110 z-0"
+              src="./public/images/showcases/2.png"
+              alt="Tatuagem de animal fantástico"
+            />
+            <img
+              class="rounded-md transition-transform duration-300 ease-in-out hover:scale-110 z-0"
+              src="./public/images/showcases/3.png"
+              alt="Tatuagem de estilo geométrico"
+              data-aos="fade-right"
 
-        <a
-          href="#"
-          class="text-center px-6 py-4 text-lg bg-primary-600 rounded-full text-neutral-50 font-semibold"
-          >Quero fazer uma tatuagem</a
-        >
-      </div>
-      <div class="lg:col-span-4">
-        <img
-          class="hidden md:w-[200rem] lg:block lg:-mt-48"
-          src="./public/images/hero-image.png"
-          alt="Hero image showing competition management interface"
-        />
-      </div>
-    </section> -->
-      <!-- <section> -->
-      <!-- Implement later -->
-      <!-- </section>
-      <section class="md:px-32 md:py-24">
-        <h2 class="md:text-2xl md:text-center md:font-bold md:mb-16">
-          Para quais modalidades o ScoreSync é perfeito?
-        </h2>
-        <ul class="md:flex md:flex-col md:items-center md:gap-y-16">
-          <div class="md:flex md:gap-10">
-            <li
-              class="md:w-64 md:flex md:flex-col md:justify-center md:items-center md:shadow-lg md:rounded-xl md:px-10 md:py-12 md:gap-2 md:group"
-            >
-              <img
-                src="./public/images/modalities/individual.svg"
-                alt=""
-                class="md:w-24 md:group-hover:animate-bounce"
-              />
-              <div>
-                <h4 class="md:font-semibold md:text-center">
-                  Competições Individuais
-                </h4>
-                <p class="md:text-xs md:text-center">
-                  Perfeito para atletas que competem sozinhos, permitindo uma
-                  gestão eficiente e personalizada das pontuações.
-                </p>
-              </div>
-            </li>
-            <li
-              class="md:w-64 md:flex md:flex-col md:justify-center md:items-center md:shadow-lg md:rounded-xl md:px-10 md:py-12 md:gap-2 md:group"
-            >
-              <img
-                src="./public/images/modalities/individual.svg"
-                alt=""
-                class="md:w-24 md:group-hover:animate-bounce"
-              />
-              <h4 class="md:font-semibold md:text-center">
-                Torneios em Equipe
-              </h4>
-              <p class="md:text-xs md:text-center">
-                Ideal para competições que envolvem times, facilitando a gestão
-                das equipes e a organização das partidas.
-              </p>
-            </li>
-            <li
-              class="md:w-64 md:flex md:flex-col md:justify-center md:items-center md:shadow-lg md:rounded-xl md:px-10 md:py-12 md:gap-2 md:group"
-            >
-              <img
-                src="./public/images/modalities/individual.svg"
-                alt=""
-                class="md:w-24 md:group-hover:animate-bounce"
-              />
-              <h4 class="md:font-semibold md:text-center">
-                Eventos Esportivos
-              </h4>
-              <p class="md:text-xs md:text-center">
-                Organize e administre grandes modalidades esportivas com
-                eficiência, mantendo a competitividade e a forma física dos
-                atletas.
-              </p>
-            </li>
+            />
           </div>
-          <div class="md:flex md:gap-10">
-            <li
-              class="md:w-64 md:flex md:flex-col md:justify-center md:items-center md:shadow-lg md:rounded-xl md:px-10 md:py-12 md:gap-2 md:group"
-            >
-              <img
-                src="./public/images/modalities/individual.svg"
-                alt=""
-                class="md:w-24 md:group-hover:animate-bounce"
-              />
-              <h4 class="md:font-semibold md:text-center">
-                Competições Acadêmicas
-              </h4>
-              <p class="md:text-xs md:text-center">
-                Excelentes para competições acadêmicas, incentivando o estudo e
-                o desenvolvimento dos participantes de forma efetiva.
-              </p>
-            </li>
-            <li
-              class="md:w-64 md:flex md:flex-col md:justify-center md:items-center md:shadow-lg md:rounded-xl md:px-10 md:py-12 md:gap-2 md:group"
-            >
-              <img
-                src="./public/images/modalities/individual.svg"
-                alt=""
-                class="md:w-24 md:group-hover:animate-bounce"
-              />
-              <h4 class="md:font-semibold md:text-center">
-                Desafios Corporativos
-              </h4>
-              <p class="md:text-xs md:text-center">
-                Perfeito para empresas que querem estimular a competição
-                interna, ajudando a aumentar a motivação e o engajamento dos
-                colaboradores.
-              </p>
-            </li>
+
+          <div class="flex flex-col gap-8 mt-32">
+            <img
+              data-aos="fade-left"
+              class="rounded-md transition-transform duration-300 ease-in-out hover:scale-110 z-0"
+              src="./public/images/showcases/4.png"
+              alt="Tatuagem de dragão"
+            />
+            <img
+              data-aos="fade-left"
+              class="rounded-md transition-transform duration-300 ease-in-out hover:scale-110 z-0"
+              src="./public/images/showcases/5.png"
+              alt="Tatuagem de criatura mágica"
+            />
+            <img
+              data-aos="fade-left"
+              class="rounded-md transition-transform duration-300 ease-in-out hover:scale-110 z-0"
+              src="./public/images/showcases/6.png"
+              alt="Tatuagem de retrato de animal"
+            />
           </div>
-        </ul>
-      </section>
-      <section class="md:px-32 md:py-24">
-        <h2 class="md:text-2xl md:text-center md:font-bold md:mb-16">
-          Principais funcionalidades do ScoreSync
-        </h2>
-        <div class="md:grid md:grid-cols-5">
-          <ul class="md:col-span-2 md:flex md:flex-col md:gap-4">
-            <li class="md:flex md:gap-4 md:shadow-md md:p-4 md:rounded-3xl">
-              <img
-                src="./public/images/functionalities/Group 2511.svg"
-                alt=""
-                class="md:w-20 md:group-hover:animate-bounce"
-              />
-              <div>
-                <h4 class="md:font-bold">Gestão de Competições</h4>
-                <p class="md:text-xs">
-                  Organize e gerencie competições com facilidade, incluindo a
-                  criação de novas competições, definição de datas e alocação de
-                  recursos.
-                </p>
-              </div>
-            </li>
-            <li class="md:flex md:gap-4 md:shadow-md md:p-4 md:rounded-3xl">
-              <img
-                src="./public/images/functionalities/Group 2511.svg"
-                alt=""
-                class="md:w-20 md:group-hover:animate-bounce"
-              />
-              <div>
-                <h4 class="md:font-bold">Gestão de Competições</h4>
-                <p class="md:text-xs">
-                  Organize e gerencie competições com facilidade, incluindo a
-                  criação de novas competições, definição de datas e alocação de
-                  recursos.
-                </p>
-              </div>
-            </li>
-            <li class="md:flex md:gap-4 md:shadow-md md:p-4 md:rounded-3xl">
-              <img
-                src="./public/images/functionalities/Group 2511.svg"
-                alt=""
-                class="md:w-20 md:group-hover:animate-bounce"
-              />
-              <div>
-                <h4 class="md:font-bold">Gestão de Competições</h4>
-                <p class="md:text-xs">
-                  Organize e gerencie competições com facilidade, incluindo a
-                  criação de novas competições, definição de datas e alocação de
-                  recursos.
-                </p>
-              </div>
-            </li>
-            <li class="md:flex md:gap-4 md:shadow-md md:p-4 md:rounded-3xl">
-              <img
-                src="./public/images/functionalities/Group 2511.svg"
-                alt=""
-                class="md:w-20 md:group-hover:animate-bounce"
-              />
-              <div>
-                <h4 class="md:font-bold">Gestão de Competições</h4>
-                <p class="md:text-xs">
-                  Organize e gerencie competições com facilidade, incluindo a
-                  criação de novas competições, definição de datas e alocação de
-                  recursos.
-                </p>
-              </div>
-            </li>
-          </ul>
-          <div class="md:col-span-3"></div>
         </div>
-      </section> -->
+
+        <!-- About the artist section -->
+        <div class="col-span-7 flex flex-col gap-8" id="about-section">
+          <div class="flex flex-col gap-4 text-sm text-neutral-100 mt-32">
+            <h2 class="text-2xl font-bold" id="about-heading">Quem sou eu?</h2>
+            <p>
+              Me chamo <span class="font-bold">Érique Chibiaque</span> e desenho
+              há mais de 10 anos. Sempre fui apaixonado por criaturas
+              mitológicas, animais e seres fantásticos, e essa paixão me levou a
+              explorar diferentes formas de arte. Comecei minha jornada
+              artística em 2014 com o desenho tradicional, utilizando grafite e
+              lápis de cor, o que me ajudou a desenvolver minha perspectiva e
+              noção geométrica. Mais tarde, me aprofundei na pintura, ganhando
+              domínio sobre cores e composição.
+            </p>
+            <p>
+              Hoje, no <span>Vulpes Tattoo</span>, localizado no centro de
+              <span class="font-bold">Bagé, RS</span>, ofereço um espaço
+              acolhedor e próximo, onde cada tatuagem é pensada para contar uma
+              história única. Se você está buscando sua primeira tatuagem ou já
+              tem experiência, estou aqui para te ajudar a transformar suas
+              ideias em algo que você carregará com orgulho.
+            </p>
+            <p>Venha conhecer o estúdio e vamos criar juntos!</p>
+          </div>
+
+          <!-- Image with highlight boxes -->
+          <div class="relative">
+            <img
+              class="rounded-md z-0 lg:w-2/3"
+              src="./public/images/about-me.png"
+              alt="Érique Chibiaque, tatuador no Vulpes Tattoo"
+            />
+            <div
+              class="flex flex-col gap-4 absolute scale-75 lg:scale-100 bottom-4 lg:top-8 lg:right-20"
+            >
+              <!-- Neon glow effect for images -->
+              <div class="highlight-box-container box-1">
+                <span class="highlight-box-glow"></span>
+                <span class="highlight-box"></span>
+              </div>
+              <div class="highlight-box-container box-2">
+                <span class="highlight-box-glow"></span>
+                <span class="highlight-box"></span>
+              </div>
+              <div class="highlight-box-container box-3">
+                <span class="highlight-box-glow"></span>
+                <span class="highlight-box"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
+    <!-- Footer section -->
     <footer>
       <!-- Footer content goes here -->
     </footer>
+
+    <!-- Main JavaScript file -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./src/main.js"></script>
   </body>
-  <script src="./src/main.js"></script>
 </html>

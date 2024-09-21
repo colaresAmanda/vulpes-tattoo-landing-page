@@ -56,5 +56,72 @@ body {
   margin: 0;
 }
 
+/* Common styles for all boxes */
+.highlight-box-glow {
+  position: absolute;
+  display: flex;
+  width: 0;
+  height: 3rem;
+  border-radius: 0.15rem;
+  background-color: rgba(219, 4, 1, 0.2);
+  box-shadow: 0px 0px 25px 10px rgba(219, 4, 1, 0.5);
+  z-index: 0;
+  filter: blur(5px);
+  opacity: 0; /* Initially hidden */
+  transition: width 1s ease-out, opacity 0.5s ease-out;
+}
 
+.highlight-box {
+  position: relative;
+  display: flex;
+  width: 0;
+  height: 3rem;
+  border-radius: 0.15rem;
+  background-color: #db0401;
+  z-index: 1;
+  box-shadow: 0px 0px 6px 3px rgba(214, 11, 11, 0.7);
+  opacity: 0; /* Initially hidden */
+  transition: width 1s ease-out 0.2s, opacity 0.5s ease-out 0.2s;
+}
 
+/* Active class to trigger lightsaber effect for all boxes */
+.active .highlight-box-glow,
+.active .highlight-box {
+  opacity: 1;
+  width: 8rem; /* Default width for the box after animation */
+}
+
+/* Box-specific styles without overriding widths */
+.box-1 .highlight-box,
+.box-1 .highlight-box-glow,
+.box-3 .highlight-box,
+.box-3 .highlight-box-glow {
+  width: 0; /* Keep initial width 0 to allow transition */
+}
+
+/* Set specific widths for box-1 and box-3 when active */
+.box-1.active .highlight-box-glow,
+.box-1.active .highlight-box {
+  width: 6rem; /* Custom width for box-1 */
+}
+
+.box-3.active .highlight-box-glow,
+.box-3.active .highlight-box {
+  width: 12rem; /* Custom width for box-3 */
+}
+
+/* Add staggered animation for each box */
+.box-1.active .highlight-box-glow,
+.box-1.active .highlight-box {
+  transition-delay: 0.5s;
+}
+
+.box-2.active .highlight-box-glow,
+.box-2.active .highlight-box {
+  transition-delay: 0.2s;
+}
+
+.box-3.active .highlight-box-glow,
+.box-3.active .highlight-box {
+  transition-delay: 0.0s;
+}

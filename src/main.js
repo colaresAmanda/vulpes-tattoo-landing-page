@@ -28,3 +28,34 @@ btn.addEventListener('click', () => {
   }
 });
 
+
+
+
+
+
+
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const boxes = document.querySelectorAll('.highlight-box-container');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+      }
+    });
+  }, {
+    threshold: 0.5 // Trigger when 50% of the element is visible
+  });
+
+  boxes.forEach(box => {
+    observer.observe(box);
+  });
+});
+
+
+AOS.init();
