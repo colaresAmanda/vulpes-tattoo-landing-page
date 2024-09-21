@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#hamburger-btn.active #line1 {
+  transform: rotate(45deg) translate(8px, 5px);
+}
+#hamburger-btn.active #line2 {
+  opacity: 0;
+}
+#hamburger-btn.active #line3 {
+  transform: rotate(-45deg) translate(8px, -5px);
+}
+
+
+/* Base styles for the menu */
+#menu {
+  transition: height 0.3s ease-in-out;
+  height: 4.5rem;
+}
+#menu.open {
+  height: 100vh;
+
+}
+
+#menu #action-button{
+  margin: 0 2rem 3rem;
+
+}
+
+
+/* Handle menu items visibility on larger screens */
+@media (min-width: 1024px) {
+  /* Base styles for the menu */
+#menu {
+  transition: height 0.3s ease-in-out;
+  height: inherit;
+}
+#menu.open {
+  height: inherit;
+
+}
+
+#menu #action-button{
+  margin: inherit;
+
+}
+}
+
+
